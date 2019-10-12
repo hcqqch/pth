@@ -1,5 +1,13 @@
 var Mock = require('mockjs')
 
+const LoginUsers = [{
+    id: 1,
+    username: 'admin',
+    password: '123456',
+    avatar: 'https://raw.githubusercontent.com/taylorchen709/markdown-images/master/vueadmin/user.png',
+    name: '张某某'
+}];
+
 const Users = [];
 
 for (let i = 0; i < 86; i++) {
@@ -13,4 +21,4 @@ for (let i = 0; i < 86; i++) {
     }));
 }
 
-export { Users };
+export { LoginUsers, Users };

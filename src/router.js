@@ -4,6 +4,7 @@ import Home from './components/Home.vue'
 import List from './views/List.vue'
 import Form from './views/Form.vue'
 import About from './views/About.vue'
+import Login from './views/Login.vue'
 
 Vue.use(router)
 const originalPush = router.prototype.push
@@ -33,6 +34,12 @@ export default new router({
         //         import ( /* webpackChunkName: "about" */ './views/Form.vue')
         // },
         {
+            path: '/login',
+            component: Login,
+            name: '',
+            hidden: true
+        },
+        {
             path: '/',
             component: Home,
             name: '导航一',
@@ -40,7 +47,8 @@ export default new router({
             children: [
                 { path: '/list', component: List, name: 'List' },
                 { path: '/form', component: Form, name: 'Form' },
-                { path: '/about', component: About, name: 'About' },
+                // { path: '/about', component: About, name: 'About' },
+                { path: '/login', component: Login, name: 'Login' },
             ]
         },
         // {
