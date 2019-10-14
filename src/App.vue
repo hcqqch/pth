@@ -34,4 +34,24 @@ body {
 .toolbar .el-form-item {
     margin-bottom: 10px;
 }
+
+.el-menu{
+    background-color: #f5f5f5;
+}
+
+.el-submenu{
+    background-color: #f5f5f5;
+}
+
+/* .container .el-submenu__title:hover{
+    background-color: #f5f5f5;
+} */
+
+.el-submenu .el-menu-item{
+    background-color: #f5f5f5;
+}
+
+.el-submenu__title .el-icon-arrow-right:before {
+    content: "";
+}
 </style>

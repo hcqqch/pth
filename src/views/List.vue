@@ -83,9 +83,6 @@ export default {
                 this.listLoading = false;
             });
         },
-        handleAdd() {
-
-        }, 
         handleCurrentChange(val) {
             this.page = val;
             this.getUsers();

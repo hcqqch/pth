@@ -51,16 +51,16 @@ export default new router({
                 { path: '/login', component: Login, name: 'Login' },
             ]
         },
-        // {
-        //     path: '/',
-        //     component: Home,
-        //     name: '导肮二',
-        //     iconCls: 'el-icon-message', //图标样式class
-        //     children: [
-        //         { path: '/list', component: List, name: 'List' },
-        //         { path: '/form', component: Form, name: 'Form' },
-        //         { path: '/about', component: About, name: 'About' },
-        //     ]
-        // },
+        {
+            path: '/',
+            component: Home,
+            name: '导肮二',
+            iconCls: 'el-icon-s-tools', //图标样式class
+            children: [
+                { path: '/list', component: List, name: 'List' },
+                { path: '/form', component: Form, name: 'Form' },
+                { path: '/about', component: About, name: 'About' },
+            ]
+        },
     ]
 })

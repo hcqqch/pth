@@ -14,6 +14,7 @@ export default {
                 return true;
             });
             let total = mockUsers.length;
+            console.log(mockUsers)
             mockUsers = mockUsers.filter((u, index) => index < 20 * page && index >= 20 * (page - 1));
             return new Promise((resolve) => {
                 setTimeout(() => {
@@ -27,13 +28,11 @@ export default {
 
         //登录
         mock.onPost('/login').reply(config => {
+            let { username, password } = JSON.parse(config.data).params;
 
-            let { username, password } = JSON.parse(config.data);
-            // let {username, password} = JSON.parse(config.data);
             return new Promise((resolve, reject) => {
                 let user = null;
                 setTimeout(() => {
-                    console.log(LoginUsers);
                     let hasUser = LoginUsers.some(u => {
                         if (u.username === username && u.password === password) {
                             user = JSON.parse(JSON.stringify(u));
@@ -41,7 +40,7 @@ export default {
                             return true;
                         }
                     });
-                    console.log(u);
+
                     if (hasUser) {
                         resolve([200, { code: 200, msg: '请求成功', user }]);
                     } else {

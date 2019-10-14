@@ -1,16 +1,16 @@
 <template>
 <div>
-<!-- <Home></Home> -->
-    this is form page
+    <h1>vuex测试</h1>
+    Clicked:{{}}times
+    <button @click="increment">+</button>
+    <button @click="decrement">-</button>
 </div>
 </template>
 
 <script>
-// import Home from '../components/Home.vue'
+
 export default {
-    // components:{
-    //     Home
-    // }
+    // Vuecompile(template)
 }
 </script>
 
