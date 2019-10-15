@@ -21,12 +21,23 @@ router.beforeEach((to, from, next) => {
     }
 })
 
-router.beforeEach((to, from, next) => {
-    if (to.path == '/login') {
-        sessionStorage.removeItem('user');
-    }
-    let user = JSON.parse();
+// router.beforeEach((to, from, next) => {
+//     if (to.path == '/login') {
+//         sessionStorage.removeItem('user');
+//     }
+//     let user = JSON.parse();
+// })
+// store.commit('increment', { amount: 30 })
+// store.commit({
+//     type: 'increment',
+//     amount: 30
+// })
+
+store.commit({
+    type: 'INCREMENT'
 })
+
+// store.dispatch('increment')
 
 new Vue({
     router,
