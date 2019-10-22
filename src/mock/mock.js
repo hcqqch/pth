@@ -49,5 +49,61 @@ export default {
                 }, 1000);
             });
         });
+
+        //新增用户
+        mock.onGet('/user/add').reply(config => {
+            let { name, addr, age, birth, sex } = config.params;
+            _Users.push({
+                name: name,
+                addr: addr,
+                age: age,
+                birth: birth,
+                sex: sex
+            });
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve([200, {
+                        code: 200,
+                        msg: '新增成功'
+                    }]);
+                }, 500);
+            });
+        })
+
+        //删除用户
+        mock.onGet('/user/remove').reply(config => {
+            let id = config.params.id
+            _Users = _Users.filter(u => u.id !== id);
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve([200, {
+                        code: 200,
+                        msg: '删除成功'
+                    }]);
+                }, 500);
+            });
+        });
+
+        //编辑用户
+        mock.onGet('/user/edit').reply(config => {
+            let { id, name, addr, age, birth, sex } = config.params;
+            _Users.some(u => {
+                u.id = id;
+                u.name = name;
+                u.addr = addr;
+                u.age = age;
+                u.birth = birth;
+                u.sex = sex;
+                return true;
+            });
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve([200, {
+                        code: 200,
+                        msg: '编辑成功'
+                    }]);
+                }, 500);
+            })
+        });
     }
 }

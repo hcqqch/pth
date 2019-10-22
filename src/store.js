@@ -35,15 +35,12 @@ export default new Vuex.Store({
         }
     },
     actions: {
-        // increment({ commit }) {
-        //     commit('increment')
-        // }
         increment(context) {
             context.commit('INCREMENT')
         },
         decrement(context) {
             context.commit('DECREMENT')
-        }
+        },
     }
 })
 

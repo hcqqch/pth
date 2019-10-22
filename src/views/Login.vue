@@ -1,6 +1,6 @@
 <template>
 <el-form :model="ruleForm2" :rules="rules2" ref="ruleForm2" label-position="left" label-width="0px" class="demo-ruleForm login-container">
-    <h3 class="title">系统登录</h3>
+    <h3 class="title">苹苔汇管理系统</h3>
     <el-form-item prop="account">
         <el-input type="text" v-model="ruleForm2.account" auto-complete="off" placeholder="账号"></el-input>
     </el-form-item>
@@ -19,6 +19,7 @@
 import {
     requestLogin
 } from '../api/api';
+
 export default {
     data() {
         return {
@@ -44,6 +45,7 @@ export default {
     },
     methods: {
         handleSubmit2() {
+            
             this.$refs.ruleForm2.validate((valid) => {
                 if (valid) {
                     this.logining = true;

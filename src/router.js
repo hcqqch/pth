@@ -61,6 +61,6 @@ export default new router({
                 { path: '/form', component: Form, name: 'Form' },
                 { path: '/about', component: About, name: 'About' },
             ]
-        },
+        }
     ]
 })

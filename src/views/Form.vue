@@ -1,6 +1,6 @@
 <template>
 <div>
-    <h1>vuex测试</h1>
+    <h1 class="text">vuex测试</h1>
     Clicked:{{getState}}times
     <button @click="increment">+</button>
     <button @click="decrement">-</button>
@@ -16,6 +16,7 @@ export default {
             'increment',
             'decrement'
         ]),
+ 
     },
     // computed: {
     //     count(){
@@ -43,7 +44,6 @@ export default {
             'getState',
         ]),   
     },
-
     
 }
 </script>
